@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Sobriquet {
 	public class DefaultGenerators {
@@ -15,9 +11,9 @@ namespace Sobriquet {
 		private readonly Generator _lastGenerator;
 
 		public DefaultGenerators(int order) {
-			var maleFirstNamesFileName = Properties.Resources.dist_male;
-			var femaleFirstNamesFileName = Properties.Resources.dist_female;
-			var lastNamesFileName = Properties.Resources.dist_all;
+			var maleFirstNamesFileName = Resources.dist_male;
+			var femaleFirstNamesFileName = Resources.dist_female;
+			var lastNamesFileName = Resources.dist_all;
 
 			var maleFirstGenerator = Generate(order, maleFirstNamesFileName);
 			var femaleFirstGenerator = Generate(order, femaleFirstNamesFileName);
